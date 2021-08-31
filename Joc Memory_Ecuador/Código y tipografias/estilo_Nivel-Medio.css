@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background: #000;
+}
+
+.memory-game {
+  width: 960px;
+  height: 320px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+  width: calc(16.6% - 10px);
+  height: calc(50% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.back-face {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+  width:  150px;
+  height: 100%;
+  /*display: flex;
+  flex-wrap: wrap;
+  padding: 5px;*/
+  position: absolute;
+  border-radius: 5px;
+  background: #fff;
+  backface-visibility: hidden;
+}
+
+#mensaje-jaguar, #mensaje-girafa, #mensaje-colibrí, #mensaje-cocodrilo, #mensaje-serpiente, #mensaje-rinoceronte, #Atrás{
+  
+  position: fixed;
+  z-index: 100;
+  left: calc(50% - 50px);
+  top: calc(50% - 25px);
+  color: white;
+  background-color: black;
+  font-family: "Distro";
+  font-size: 2em;
+  display: none;
+}
