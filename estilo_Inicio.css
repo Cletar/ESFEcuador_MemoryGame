@@ -3,41 +3,86 @@
   src: local("DISTROB_.ttf");
 }
 
-*{
-	background-color: #ff8700;
+body{
+	background-color: #00542a;
 }
-button{
+
+
+#titulo-h1{
 	display: block;
-	color:#1a181d;
-	background-color:white;
+	text-align:center;
+	color: #F39200;
 	font-family: "Distro";
-	font-size: 2em;
+	margin: auto;
+	font-size: 1.5em;
+}
+
+#titulo-h2{
+	display: block;
+	text-align:center;
+	color: #F39200;
+	font-family: "Distro";
+	margin-bottom: 0px;
+	margin-top: auto;
+	font-size: 3em;
+}
+
+.boton img{
+	margin: 0;
+	width: 170px;
+}
+
+.boton a{
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-right: 50px;
+	margin-left:  50px;
+}
+
+.boton{
+	display: flex;
+	justify-content: center;
+	margin: 25px;
+	border-radius: 10px;
+}
+
+.Instrucciones{
+	display: block;
+	width: 700px;
+	background-color: #009933;
+	border-radius: 10px;
+	position: center;
 	margin: auto;
 }
 
-#titulo-h1{
+.Instrucciones b{
 	display: block;
 	text-align:center;
 	color: white;
 	font-family: "Distro";
 	margin: auto;
-	font-size: 3em;
+	font-size: 1.5em;
 }
 
-img{
-	display:block;
-	margin:auto;
+.Logos{
+	display:  flex;
+	justify-content: center;
+	margin-top: 25px;
 }
 
-a{
-	text-decoration: none;
-}
 
-b{
+.Logos b{ 
 	display: block;
-	text-align: center;
 	color: white;
 	font-family: "Distro";
-	margin: auto;
-	font-size: 1em;
+	font-size: 1.25em;
+
 }
+.Logos img {
+	height: 180px;
+	margin: 10px;
+	justify-content: center;
+}
+
+
+

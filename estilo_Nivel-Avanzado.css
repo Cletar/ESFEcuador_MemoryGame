@@ -6,10 +6,31 @@
 
 body {
   height: 100vh;
-  display: flex;
   flex-wrap: wrap;
-  background: #000;
+  background: #00542a;
 }
+.pantalla{
+  display: block;
+  background-color: #00542a;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title img{
+  height: 50px;
+  margin-top: 50px;
+}
+
+.title h1{
+  color: #F39200;
+  font-family: "Distro";
+  font-size: 3em;
+  margin: 50px;
+  text-align: center;
+}
+
 
 .memory-game {
   width: 640px;
@@ -63,16 +84,25 @@ body {
   backface-visibility: hidden;
 }
 
-#mensaje-cocina, #mensaje-contaminación, #mensaje-inundación, #mensaje-lluvia, #mensaje-orografía, #mensaje-pesca, #mensaje-pozo, #mensaje-salud, #mensaje-sequía, #Atrás{
+#mensaje-1, #mensaje-2, #mensaje-3, #mensaje-4, #mensaje-5, #mensaje-6, #mensaje-7, #mensaje-8, #mensaje-9, #Atrás{
   
   position: fixed;
   z-index: 100;
-  left: calc(50% - 50px);
-  top: calc(50% - 25px); 
+  left: calc(50% - 320px);
+  top: calc(50% - 80px);
+  width: 640px;
   color: white;
-  background-color: black;
+  background-color: #00542a;
   font-family: "Distro";
   font-size: 2em;
+  text-align: center;
   display: none;
 }
 
+#mensaje-1 img, #mensaje-2 img, #mensaje-3 img, #mensaje-4 img, #mensaje-5 img, #mensaje-6 img, #mensaje-7 img, #mensaje-8 img, #mensaje-9 img{
+  width: 50px;
+  float: right;
+}
+#Atrás img{
+  width: 120px;
+}

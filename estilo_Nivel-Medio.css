@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Distro';
+  src: local('DISTROB_.ttf') format('truetype')
+
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -6,10 +12,33 @@
 
 body {
   height: 100vh;
-  display: flex;
   flex-wrap: wrap;
-  background: #000;
+  background: #00542a;
 }
+
+.pantalla{
+  display: block;
+  background-color: #00542a;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title img{
+  height: 50px;
+  margin-top: 50px;
+}
+
+.title h1{
+  color: #F39200;
+  font-family: "Distro";
+  font-size: 3em;
+  margin: 50px;
+  text-align: center;
+}
+
 
 .memory-game {
   width: 960px;
@@ -62,15 +91,26 @@ body {
   backface-visibility: hidden;
 }
 
-#mensaje-jaguar, #mensaje-girafa, #mensaje-colibrí, #mensaje-cocodrilo, #mensaje-serpiente, #mensaje-rinoceronte, #Atrás{
+#mensaje-jaguar, #mensaje-leoncillo, #mensaje-aguila, #mensaje-anaconda, #mensaje-tapir, #mensaje-delfin, #Atrás{
   
   position: fixed;
   z-index: 100;
-  left: calc(50% - 50px);
-  top: calc(50% - 25px);
+  left: calc(50% - 320px);
+  top: calc(50% - 80px);
+  width: 640px;
   color: white;
-  background-color: black;
+  background-color: #00542a;
   font-family: "Distro";
   font-size: 2em;
+  text-align: center;
   display: none;
+}
+
+#mensaje-jaguar img, #mensaje-leoncillo img, #mensaje-aguila img, #mensaje-anaconda img, #mensaje-tapir img, #mensaje-delfin img {
+  width: 50px;
+  float: right;
+  }
+
+#Atrás img{
+  width: 120px;
 }

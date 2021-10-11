@@ -26,11 +26,12 @@ function flipCard() {
   var aux_card = firstCard.dataset.framework;
   if (checkForMatch()){ 
     var carta = 'mensaje-' + String(aux_card);
-    document.getElementById(carta).style.display = "block";
-    setTimeout(function(){document.getElementById(carta).style.display = "none";}, 1000);
+    document.getElementById(carta).style.display = "block"; 
+    setTimeout(function(){document.getElementById(carta).style.display = "none";}, 10000);
+    document.getElementById(carta).onclick = () => {document.getElementById(carta).style.display = "none";}
     lista=lista.concat(aux_card);
-    if (lista.includes("planta1")&& lista.length == 4 ||lista.includes("jaguar")&& lista.length == 6 || lista.includes("cocina")&& lista.length == 9){
-      setTimeout(function(){document.getElementById("Atrás").style.display = "block";},1000);
+    if (lista.includes("Floripondio")&& lista.length == 4 ||lista.includes("jaguar")&& lista.length == 6 || lista.includes("1")&& lista.length == 9){
+      setTimeout(function(){document.getElementById("Atrás").style.display = "flex";},2000);
     }
   }
 }
