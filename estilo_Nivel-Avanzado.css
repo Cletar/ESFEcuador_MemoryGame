@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Distro';
+  src: local('DISTROB_.ttf') format('truetype')
+
+}
+
 * {
   padding: 0;
   margin: 0;
