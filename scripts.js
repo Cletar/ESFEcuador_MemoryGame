@@ -26,9 +26,10 @@ function flipCard() {
   var aux_card = firstCard.dataset.framework;
   if (checkForMatch()){ 
     var carta = 'mensaje-' + String(aux_card);
+    var cerrar = 'cerrar-' + carta
     document.getElementById(carta).style.display = "block"; 
     setTimeout(function(){document.getElementById(carta).style.display = "none";}, 10000);
-    document.getElementById(carta).onclick = () => {document.getElementById(carta).style.display = "none";}
+    document.getElementById(cerrar).onclick = () => {document.getElementById(carta).style.display = "none";}
     lista=lista.concat(aux_card);
     if (lista.includes("Floripondio")&& lista.length == 4 ||lista.includes("jaguar")&& lista.length == 6 || lista.includes("1")&& lista.length == 9){
       setTimeout(function(){document.getElementById("Atrás").style.display = "flex";},2000);
@@ -80,3 +81,24 @@ function resetBoard() {
 cards.forEach(card => card.addEventListener('click', flipCard));
 
 
+const dom = {
+    time: $( '.time')[0],
+    finalTime: $('.final-time')[0],
+}
+
+const render = {
+    initDigits: (texts) => {
+        allTexts = texts.concat(_.fill(Array(ALL_DIGITS.length - texts.length), ''))
+        _.shuffle(dom.digits).forEach((digit, i) => {
+            digit.innerText = allTexts[i]
+            digit.className = ''
+        })
+    },
+    updateTime: (value) => {
+        dom.time.innerText = value
+    },
+
+    updateFinal: () => {
+        dom.finalTime.innerText = dom.time.innerText
+    },
+}

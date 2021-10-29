@@ -23,6 +23,8 @@ body {
 .title {
   display: flex;
   justify-content: center;
+  text-align: center;
+  position: relative;
 }
 
 .title img{
@@ -36,6 +38,22 @@ body {
   font-size: 3em;
   margin: 50px;
   text-align: center;
+}
+
+.Timer{
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.time{
+  position: absolute;
+  top: 45.5%;
+  left: 66.25%;
+  transform: translate(-50%, -50%);
+  font-family: "Distro";
+  color: #F39200;
 }
 
 
@@ -113,6 +131,9 @@ body {
 #Atrás img{
   width: 120px;
 }
+
+
+
 
 
 
