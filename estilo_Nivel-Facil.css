@@ -49,9 +49,8 @@ body {
 
 .time{
   position: absolute;
-  top: 45.5%;
-  left: 66.25%;
-  transform: translate(-50%, -50%);
+  top: 65px;
+  left: 15px;
   font-family: "Distro";
   color: #F39200;
 }

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Distro";
-  src: url('DISTROB_.ttf') format('truetype');
+  src: local("DISTROB_.ttf") format('truetype');
 }
 
 body{

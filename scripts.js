@@ -6,6 +6,26 @@ let firstCard, secondCard;
 var n_count=0
 var lista= []
 
+
+
+var temps = 0;
+
+var comptador = setInterval(function() {
+  temps++;
+
+  var min = Math.floor(temps/60);
+  var seg = temps%60;
+
+  seg = ('0'+seg).slice(-2);
+  min = ('0'+min).slice(-2);
+
+  document.querySelector(".segundos").innerHTML = seg;
+  document.querySelector(".minutos").innerHTML = min;
+},1000);
+
+
+var missatge_tancament;
+
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -28,16 +48,28 @@ function flipCard() {
     var carta = 'mensaje-' + String(aux_card);
     var cerrar = 'cerrar-' + carta
     document.getElementById(carta).style.display = "block"; 
-    setTimeout(function(){document.getElementById(carta).style.display = "none";}, 10000);
-    document.getElementById(cerrar).onclick = () => {document.getElementById(carta).style.display = "none";}
-    lista=lista.concat(aux_card);
-    if (lista.includes("Floripondio")&& lista.length == 4 ||lista.includes("jaguar")&& lista.length == 6 || lista.includes("1")&& lista.length == 9){
-      setTimeout(function(){document.getElementById("Atrás").style.display = "flex";},2000);
+    lockBoard = true;
+    missatge_tancament = setTimeout(function(){
+      document.getElementById(carta).style.display = "none";
+      lockBoard =false;
+      final_juego();
+    }, 25000);
+    document.getElementById(cerrar).onclick = () => {
+      document.getElementById(carta).style.display = "none";
+      lockBoard = false;
+      clearTimeout(missatge_tancament)
+      final_juego();
     }
+    lista=lista.concat(aux_card);
   }
 }
 
-
+function final_juego(){
+  if (lista.includes("Floripondio")&& lista.length == 4 ||lista.includes("jaguar")&& lista.length == 6 || lista.includes("1")&& lista.length == 9){
+    document.getElementById("Atrás").style.display = "flex";
+    clearInterval(comptador)
+  }
+}
 
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;

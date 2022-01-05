@@ -39,6 +39,20 @@ body {
   text-align: center;
 }
 
+.Timer{
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.time{
+  position: absolute;
+  top: 65px;
+  left: 15px;
+  font-family: "Distro";
+  color: #F39200;
+}
 
 .memory-game {
   width: 960px;

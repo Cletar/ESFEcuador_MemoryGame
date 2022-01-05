@@ -6,15 +6,27 @@
   <title>Nivel Fácil</title>
 
   <link rel="stylesheet" href="estilo_Nivel-Facil.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2CP16MCJK3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-2CP16MCJK3');
+  </script>
 </head>
 <body>
   <div class= "pantalla">
     <div class= "title">
       <a href="index.html"><img src="img/DISENO_OTRAS_IMAGENES/MENÙ PRINCIPAL.png"></a>     
       <h1 id="titulo-h1">NIVEL INICIAL</h1>
-      <div>
+      <div class="Timer">
         <img src="img/DISENO_OTRAS_IMAGENES/CRONÓMETRO.png">
-        <span class="time">00:00</span>
+        <div class="time">
+          <span class="minutos">00</span>:
+          <span class="segundos">00</span>
+        </div>
       </div>
     </div>
 
@@ -71,9 +83,6 @@
       <b>NIVEL MEDIO</b>
       <a href="Nivel_Medio.html"><img src="img/DISENO_FIN_NIVEL/SIGUIENTE NIVEL.png"></a>
     </div>
-    <p>
-      <span class="final-time">00:00</span>
-    </p>
   </div>
 
  
@@ -82,19 +91,19 @@
 
   <div id="mensaje-Floripondio">
     <img id = "cerrar-mensaje-Floripondio" src="img/DISENO_OTRAS_IMAGENES/CERRAR.png">
-    El FLORIPONDIO es una planta arbustiva con flores en forma de campana que se extiende por los Andes.
+    El FLORIPONDIO (<i>Brugmansia arbórea</i>) es una planta arbustiva con flores en forma de campana que se extiende por los Andes y Amazonia.
   </div>
   <div id="mensaje-Bromelia">
     <img id = "cerrar-mensaje-Bromelia" src="img/DISENO_OTRAS_IMAGENES/CERRAR.png">
-    Las BROMELIAS son plantas tropicales muy abundantes en los bosques húmedos de la Amazonía.
+    Las BROMELIAS (<i>Guzmania lingulata</i>) son plantas tropicales muy abundantes en los bosques húmedos de la Amazonía.
   </div>
   <div id="mensaje-Heliconia">
     <img id = "cerrar-mensaje-Heliconia" src="img/DISENO_OTRAS_IMAGENES/CERRAR.png">
-    Las HELICONIAS son plantas tropicales amazónicas utilizadas para la ornamentación por su belleza y coloración.
+    Las HELICONIAS (<i>Heliconias sp.</i>) son plantas tropicales amazónicas utilizadas para la ornamentación por su belleza y coloración.
   </div>
   <div id="mensaje-Orquidea">
     <img id = "cerrar-mensaje-Orquidea" src="img/DISENO_OTRAS_IMAGENES/CERRAR.png">
-    Las ORQUÍDEAS son plantas tropicales ornamentales debido a sus espectaculares, complejas y coloridas formas.
+    Las ORQUÍDEAS (<i>Orchidaceae</i>) son plantas tropicales ornamentales debido a sus espectaculares, complejas y coloridas formas.
   </div>
 
   <script src="scripts.js"></script>
