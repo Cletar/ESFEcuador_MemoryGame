@@ -1,7 +1,7 @@
 
 @font-face {
   font-family: 'Distro';
-  src: local('DISTROB_.ttf') format('truetype')
+  src: url('DISTROB_.ttf') format('truetype')
 
 }
 * {
